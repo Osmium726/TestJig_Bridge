@@ -1,0 +1,242 @@
+\doxysection{Inv\+\_\+\+Ctrlr\+\_\+io.\+h}
+\hypertarget{_inv___ctrlr__io_8h_source}{}\label{_inv___ctrlr__io_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{00002\ \textcolor{comment}{/*\ \ Module\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ cim\_fader\_io.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00003\ \textcolor{comment}{/*\ \ Language\ used\ \ \ \ \ \ \ :\ MPLAB\ XC8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00004\ \textcolor{comment}{/*\ \ Microprocessor\ \ \ \ \ \ :\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00005\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00006\ \textcolor{comment}{/*\ \ Function\ \ \ \ \ \ \ \ \ \ \ \ :\ \ IO\ mapping\ and\ system\ references\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00007\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Global\ data\ declaration\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00008\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00009\ \textcolor{comment}{/*\ \ Revision\ History\ :\ \ Author\ \ \ \ \ \ \ \ \ \ Date\ \ \ \ \ \ \ \ \ \ \ \ Reason\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00010\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ M.D.Kroon\ \ \ \ \ \ \ Feb\ 2023\ \ \ \ \ \ \ \ Initial\ Design\ \ \ \ */}}
+\DoxyCodeLine{00011\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00012\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00013\ \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00016\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ Defines\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00017\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ TEST\_MODE}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00021\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ Emuns\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00022\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ PWM\_SET\_0\ \ \ \ \ \ =\ 0,}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ PWM\_SET\_25\ \ \ \ \ =\ 1,}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ \ PWM\_SET\_50\ \ \ \ \ =\ 2,}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ \ PWM\_SET\_75\ \ \ \ \ =\ 3,}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ \ \ \ }}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ \ PWM\_SET\_100\ =\ 4,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ \ PWM\_SET\_125\ =\ 5,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ \ PWM\_SET\_150\ =\ 6,}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ \ PWM\_SET\_175\ =\ 7,}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ \ PWM\_SET\_200\ =\ 8,}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ \ PWM\_SET\_225\ =\ 9,}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ \ PWM\_SET\_250\ =\ 10,}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ \ PWM\_SET\_275\ =\ 11,}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ \ PWM\_SET\_300\ =\ 12,}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ \ PWM\_SET\_325\ =\ 13,}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ \ PWM\_SET\_350\ =\ 14,}}
+\DoxyCodeLine{00042\ \textcolor{comment}{//\ \ PWM\_SET\_375\ =\ 15,}}
+\DoxyCodeLine{00043\ \textcolor{comment}{//}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ \ MAX\_DIP\_SET\ =\ 16,}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ \ \ \ NUM\_SOFTSTART\_STEPS\ =\ 1000,}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ \ \ \ NUM\_SOFTSTART\_LONG\_STEPS\ =\ 2000,}}
+\DoxyCodeLine{00047\ \ \ \ }
+\DoxyCodeLine{00048\ \textcolor{comment}{//\ \ \ \ NUM\_SOFTSTOP\_STEPS\ =\ 20,}}
+\DoxyCodeLine{00049\ \textcolor{comment}{//\ \ \ \ NUM\_SOFTSTOP\_LONG\_STEPS\ =\ 200,}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ \ FADE\_MASK\ \ \ \ \ \ \ =\ 0x0f,}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ \ FADE\_SET\ \ \ \ }}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ SOFTSTART\_10\ =\ 10,}
+\DoxyCodeLine{00055\ \ \ \ \ SOFTSTART\_20\ =\ 20,}
+\DoxyCodeLine{00056\ \ \ \ \ SOFTSTART\_50\ =\ 50,}
+\DoxyCodeLine{00057\ \ \ \ \ SOFTSTART\_100\ =\ 100,}
+\DoxyCodeLine{00058\ \ \ \ \ SOFTSTART\_500\ =\ 500,}
+\DoxyCodeLine{00059\ \ \ \ \ SOFTSTART\_1000\ =\ 1000,\ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ SOFTSTART\_2000\ =\ 2000,}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ SOFTSTOP\ =\ 20,}
+\DoxyCodeLine{00063\ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ PWM\_SET\_100\ =\ 505,}
+\DoxyCodeLine{00066\ \ \ \ \ PWM\_SET\_200\ =\ 1010,}
+\DoxyCodeLine{00067\ \ \ \ \ PWM\_SET\_400\ =\ 2020,}
+\DoxyCodeLine{00068\ \ \ \ \ PWM\_SET\_800\ =\ 4040,}
+\DoxyCodeLine{00069\ \ \ \ \ PWM\_SET\_1000=\ 5050}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \textcolor{comment}{//\ \ \ \ PWM\_SET\_100\ \ \ =\ 198,}}
+\DoxyCodeLine{00072\ \textcolor{comment}{//\ \ PWM\_SET\_200\ =\ 396,}}
+\DoxyCodeLine{00073\ \textcolor{comment}{//\ \ PWM\_SET\_500\ =\ 990,}}
+\DoxyCodeLine{00074\ \textcolor{comment}{//\ \ PWM\_SET\_1000\ \ \ \ =\ 1980}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ }
+\DoxyCodeLine{00080\ \textcolor{comment}{/*-\/-\/-\/-\/\ Pins\ and\ IOs-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00081\ \ \ \ \ }
+\DoxyCodeLine{00082\ \textcolor{comment}{//\#define\ FADE1\_PIN\ \ \ (0x01<<4)\ \ \ \ \ }}
+\DoxyCodeLine{00083\ \textcolor{comment}{//\#define\ FADE2\_PIN\ \ \ (0x01<<5)\ \ \ \ \ }}
+\DoxyCodeLine{00084\ \textcolor{comment}{//\#define\ FADE1\_PIN\ \ \ 0x10\ \ \ \ \ }}
+\DoxyCodeLine{00085\ \textcolor{comment}{//\#define\ FADE2\_PIN\ \ \ 0x20\ \ \ \ \ }}
+\DoxyCodeLine{00086\ \textcolor{comment}{//\#define\ FADE\_TIME\_MASK\ \ \ 0x0f}}
+\DoxyCodeLine{00087\ \textcolor{comment}{//\ \ \ \ }}
+\DoxyCodeLine{00088\ \textcolor{comment}{//\#define\ CHANNEL\_1\_PORT\ \ \ PORTA}}
+\DoxyCodeLine{00089\ \textcolor{comment}{//\#define\ CHANNEL\_2\_PORT\ \ \ PORTB\ \ \ \ }}
+\DoxyCodeLine{00090\ \textcolor{comment}{//\#define\ FADER\_CTRL\ \ PORTC}}
+\DoxyCodeLine{00091\ \textcolor{comment}{//\ \ \ \ }}
+\DoxyCodeLine{00092\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ SD\_PIN\ \ \ \ \ \ 0x80\ \ \ \ \ }}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ OE\_PIN\ \ \ \ \ \ 0x10\ \ \ \ \ }}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ PSU\_PORT\ \ \ \ \ PORTB}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ MAXDTY\_PIN\ \ \ 0x20\ \ \ \ \ }}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ EN\_PIN\ \ \ \ \ \ \ 0x40}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ EN\_PIN\_bm\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PIN4\_bm}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ nEN\_INTERRUPT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PORTC.INTFLAGS\ \&\ EN\_PIN\_bm}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ nEN\_CLEAR\_INTERRUPT\_FLAG\ \ \ \ PORTC.INTFLAGS\ \&=\ EN\_PIN\_bm}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ SD\_PIN\_bm\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PIN7\_bm}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ nSD\_INTERRUPT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PORTB.INTFLAGS\ \&\ SD\_PIN\_bm}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ nSD\_CLEAR\_INTERRUPT\_FLAG\ \ \ \ PORTB.INTFLAGS\ \&=\ SD\_PIN\_bm}}
+\DoxyCodeLine{00107\ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\ \#define\ SD\_PIN\_bm\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PIN7\_bm}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ nSD\_INTERRUPT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PORTB.INTFLAGS\ \&\ SD\_PIN\_bm}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ nSD\_CLEAR\_INTERRUPT\_FLAG\ \ \ \ PORTB.INTFLAGS\ \&=\ SD\_PIN\_bm}}
+\DoxyCodeLine{00112\ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ CTRL\_PORT\ \ \ \ \ PORTC}}
+\DoxyCodeLine{00115\ \ \ \ \ }
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ SW\_MASK\ \ \ \ \ 0x0F}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ SW\_MASK\_SOFTSTART\ \ \ \ 0x0C}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ SW\_MASK\_TON\ 0x03}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ SW\_PORT\ \ \ \ \ PORTC}}
+\DoxyCodeLine{00123\ \ \ \ \ }
+\DoxyCodeLine{00124\ \textcolor{comment}{//\#define\ SOFTSTART\_PIN\ \ \ \ \ \ \ 0x08}}
+\DoxyCodeLine{00125\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ DAC\_ACTIVE\_LOW\ \ \ \ \ \ 0x00\ \ \ }}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ CTRL\_INPUTS\ \ \ \ \ \ \ \ \ 0x00}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ DAC\_INIT\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00130\ \ \ \ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ IO\_PIN\_SETUP\ \ \ (\ !PORT\_INVEN\_bm\ |\ !PORT\_PULLUPEN\_bm\ )\ \ \ }}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ SW\_PIN\_SETUP\ \ \ (\ SW\_MASK\ \ !PORT\_INVEN\_bm\ |\ !PORT\_PULLUPEN\_bm\ )\ \ \ }}
+\DoxyCodeLine{00133\ \ \ \ \ }
+\DoxyCodeLine{00134\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00135\ \textcolor{comment}{/*\ \ \ \ Application\ defines\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00136\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00137\ \textcolor{comment}{//\#define\ PWM\_TOP\_MAX\ \ \ \ \ \ \ \ \ 0x3158\ \ \ \ \ /*\ freq\ =\ 5Mhz\ timer\ TOP\ \ \ 400Hz\ */}}
+\DoxyCodeLine{00138\ \textcolor{comment}{//\#define\ PWM\_TOP\_MAX\ \ \ \ \ \ \ \ \ (0x3158/2\ )\ \ \ \ /*\ freq\ =\ 5Mhz\ timer\ TOP\ \ \ 800Hz\ */}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ PWM\_TOP\_MAX\_400\ \ \ \ \ \ \ \ \ (0x3158\ )\ \ \ \ }\textcolor{comment}{/*\ freq\ =\ 5Mhz\ timer\ TOP\ \ \ 400Hz\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ PWM\_TOP\_MAX\_800\ \ \ \ \ \ \ \ \ (0x3158/2\ )\ \ \ \ }\textcolor{comment}{/*\ freq\ =\ 5Mhz\ timer\ TOP\ \ \ 800Hz\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ PWM\_TOP\_MAX\_20K\ \ \ \ \ \ \ \ \ (250\ )\ \ \ \ }\textcolor{comment}{/*\ freq\ =\ 5Mhz\ timer\ TOP\ \ \ 20KHz\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ PWM\_TOP\_MAX\_30K\ \ \ \ \ \ \ \ \ (165\ )\ \ \ \ }\textcolor{comment}{/*\ freq\ =\ 5Mhz\ timer\ TOP\ \ \ 30KHz\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ PWM\_TOP\_MAX\_40K\ \ \ \ \ \ \ \ \ (125\ )\ \ \ \ }\textcolor{comment}{/*\ freq\ =\ 5Mhz\ timer\ TOP\ \ \ 40KHz\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ PWM\_TOP\_MAX\_50K\ \ \ \ \ \ \ \ \ (100\ )\ \ \ \ }\textcolor{comment}{/*\ freq\ =\ 5Mhz\ timer\ TOP\ \ \ 50KHz\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\ \#define\ PWM\_TOP\_MAX\ \ \ \ \ \ \ \ \ PWM\_TOP\_MAX\_800}}
+\DoxyCodeLine{00148\ \ \ \ }
+\DoxyCodeLine{00149\ \ \ \ \ }
+\DoxyCodeLine{00150\ \ \ \ \ }
+\DoxyCodeLine{00151\ \ \ \ \ }
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ PWM\_MAX\_LEVEL\ \ \ \ \ \ \ (\ PWM\_TOP\_MAX/2\ )\ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//max\ PWM}}
+\DoxyCodeLine{00153\ \textcolor{comment}{//\#define\ PWM\_MAX\_LEVEL\_A\ \ \ 127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //max\ PWM\ A}}
+\DoxyCodeLine{00154\ \textcolor{comment}{//\#define\ PWM\_MAX\_LEVEL\_B\ \ \ PWM\_TOP\_MAX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //max\ PWM\ b}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ PWM\_MIN\_LEVEL\ \ \ \ \ \ \ 0\ \ \ \ \ \ \ }\textcolor{comment}{//min\ \ level}}
+\DoxyCodeLine{00156\ \textcolor{comment}{//\#define\ PWM\_DEAD\_TIME\ \ \ \ \ \ \ 10\ \ \ \ \ \ //Dead\ Time\ between\ wave\ a\ and\ wave\ b}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#define\ PWM\_DEAD\_TIME\ \ \ \ \ \ \ 1\ \ \ \ \ \ }\textcolor{comment}{//Dead\ Time\ between\ wave\ a\ and\ wave\ b}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ MAX\_SD\_WAIT\ \ \ \ \ \ \ \ \ 25\ \ \ \ \ \ }\textcolor{comment}{/*\ wait\ for\ SD\_Circuits\ to\ reset\ RC\ \string~60mS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00159\ \ \ \ \ }
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ PSU\_ON\ \ \ \ \ \ \ \ \ \ false\ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ swap\ polarity\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ PSU\_OFF\ \ \ \ \ \ \ \ \ true}}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#define\ SHUTDOWN\_ACTIVE\ false\ \ \ \ \ \ \ }}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00165\ \textcolor{comment}{/*\ \ \ \ Bit\ definitions\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00166\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00169\ \textcolor{comment}{/*\ \ \ \ Application\ data\ types\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00170\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\ }
+\DoxyCodeLine{00171\ \ \ \ \ }
+\DoxyCodeLine{00172\ \ \ \ \ }
+\DoxyCodeLine{00173\ \ \ \ \ }
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#if\ (\ MAIN\_OWNER\ ==\ 1\ )}}
+\DoxyCodeLine{00175\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00176\ \textcolor{comment}{/*\ \ \ \ Local\ function\ prototypes\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00177\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00180\ \textcolor{comment}{/*\ \ \ \ External\ function\ prototypes\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00181\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00184\ \textcolor{comment}{/*\ \ \ \ System\ Data\ available\ to\ other\ External\ /\ System\ functions\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00185\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Pwm\_A\_u16;}
+\DoxyCodeLine{00188\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Pwm\_B\_u16;}
+\DoxyCodeLine{00189\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Pwm\_old\_u16;}
+\DoxyCodeLine{00190\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Pwm\_max\_u16;}
+\DoxyCodeLine{00191\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ Pwm\_Drv\_Channel;}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Dead\_time\_u8;}
+\DoxyCodeLine{00194\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstart;}
+\DoxyCodeLine{00195\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstop;}
+\DoxyCodeLine{00196\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstart\_step;}
+\DoxyCodeLine{00197\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstop\_step;}
+\DoxyCodeLine{00198\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstart\_old;}
+\DoxyCodeLine{00199\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstop\_old;}
+\DoxyCodeLine{00200\ \ }
+\DoxyCodeLine{00201\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstart\_max;}
+\DoxyCodeLine{00202\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstop\_max;}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ SD\_wait\_cntr;}
+\DoxyCodeLine{00205\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ I\_Limit\_cntr;}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00207\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00208\ \textcolor{comment}{/*\ \ \ \ Data\ available\ to\ other\ External\ /\ System\ functions\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00209\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00210\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Pwm\_A\_u16;}
+\DoxyCodeLine{00211\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Pwm\_B\_u16;}
+\DoxyCodeLine{00212\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Pwm\_old\_u16;}
+\DoxyCodeLine{00213\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Pwm\_max\_u16;}
+\DoxyCodeLine{00214\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ Pwm\_Drv\_Channel;}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Dead\_time\_u8;}
+\DoxyCodeLine{00217\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstart;}
+\DoxyCodeLine{00218\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstop;}
+\DoxyCodeLine{00219\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstart\_step;}
+\DoxyCodeLine{00220\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstop\_step;\ }
+\DoxyCodeLine{00221\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstart\_old;}
+\DoxyCodeLine{00222\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstop\_old;}
+\DoxyCodeLine{00223\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstart\_max;}
+\DoxyCodeLine{00224\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ softstop\_max;}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ SD\_wait\_cntr;}
+\DoxyCodeLine{00227\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ I\_Limit\_cntr;}
+\DoxyCodeLine{00228\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00229\ \textcolor{comment}{/*\ \ \ \ External\ Application\ function\ prototypes\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00230\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00234\ \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{00235\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ End\ of\ Header\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00236\ \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{00237\ }
+
+\end{DoxyCode}

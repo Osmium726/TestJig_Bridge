@@ -1,0 +1,153 @@
+\doxysection{Inv\+\_\+\+Ctrlr.\+h}
+\hypertarget{_inv___ctrlr_8h_source}{}\label{_inv___ctrlr_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{00002\ \textcolor{comment}{/*\ \ Module\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ INV\_CTRLR.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00003\ \textcolor{comment}{/*\ \ Language\ used\ \ \ \ \ \ \ :\ MPLAB\ xc8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00004\ \textcolor{comment}{/*\ \ Microprocessor\ \ \ \ \ \ :\ attiny417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00005\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00006\ \textcolor{comment}{/*\ \ Function\ \ \ \ \ \ \ \ \ \ \ \ :\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00007\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00008\ \textcolor{comment}{/*\ \ Revision\ History\ :\ \ Author\ \ \ \ \ \ \ \ \ \ Date\ \ \ \ \ \ \ \ \ \ \ \ Reason\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00009\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ M.D.Kroon\ \ \ \ \ \ \ Sept\ 2023\ \ \ \ \ \ \ \ Initial\ Design\ \ \ \ */}}
+\DoxyCodeLine{00010\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00011\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00012\ \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00015\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ Defines\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00016\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00019\ \textcolor{comment}{/*\ \ \ \ Application\ data\ prototypes\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00020\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00023\ \textcolor{comment}{/*\ \ \ \ Bit\ definitions\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00024\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00027\ \textcolor{comment}{/*\ \ \ \ Application\ data\ types\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00028\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#if\ (\ INV\_CTRLR\_OWNER\ ==\ 1\ )}}
+\DoxyCodeLine{00030\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00031\ \textcolor{comment}{/*\ \ \ \ Data\ available\ used\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00032\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00033\ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pwm\_softstart\_tbl[4]\ =\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ SOFTSTART\_10,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ SOFTSTART\_20,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ SOFTSTART\_50,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ SOFTSTART\_500\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00040\ \ \ }
+\DoxyCodeLine{00041\ \ \textcolor{comment}{/*\ Frequency\ *\ Timer\ Fullscale\ Reload\ *\ US\ /1E-\/6\ */}}
+\DoxyCodeLine{00042\ \ \textcolor{comment}{/*\ \ 400Hz\ *\ 12632\ *\ 100\ /\ 1E-\/6\ \ \ =>\ 505\ */}}
+\DoxyCodeLine{00043\ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pwm\_ton\_tbl[4]\ =\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ PWM\_SET\_800,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ PWM\_SET\_400,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ PWM\_SET\_200,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ PWM\_SET\_100}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ Frequency\ Timer\_Max\ 1/2\ Cycle\ \ \ \ \ \ \ \ 5\ \ \ 30\ \ 60\ \ 80\ \ \ \ \ \ T5\ \ T30\ T60\ T80}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ \ \ \ \ \ 20K\ \ \ \ \ 250\ \ \ \ \ 125\ \ \ \ \ \ \ \ \ \ \ \ \ 6\ \ \ 37\ \ 75\ \ 100\ \ \ \ \ 16\ \ 47\ \ 85\ \ 110}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ \ \ \ \ \ 30K\ \ \ \ \ 165\ \ \ \ \ 82.5\ \ \ \ \ \ \ \ \ \ \ \ 4\ \ \ 24\ \ 49\ \ 66\ \ \ \ \ \ 14\ \ 34\ \ 59\ \ 76}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ \ \ \ \ \ 40K\ \ \ \ \ 125\ \ \ \ \ 62.5\ \ \ \ \ \ \ \ \ \ \ \ 3\ \ \ 18\ \ 37\ \ 50\ \ \ \ \ \ 13\ \ 28\ \ 47\ \ 60}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ \ \ \ \ \ 50K\ \ \ \ \ 100\ \ \ \ \ 50\ \ \ \ \ \ \ \ \ \ \ \ \ \ 2\ \ \ 15\ \ 30\ \ 40\ \ \ \ \ \ 12\ \ 25\ \ 40\ \ 50}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pwm\_tbl[16]\ =\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ 322,1885,3760,5010,\ \ \ \ \ \ \textcolor{comment}{/*\ 400\ \ PWM*/}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ 22,85,160,210,\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 10K\ \ PWM*/}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ 14,34,\ 59,\ 76,\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 30K\ \ PWM*/}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ 16,47,\ 85,\ 110\ \ \ \ \ \ \ \textcolor{comment}{/*\ 20K\ \ PWM*/}}
+\DoxyCodeLine{00063\ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ 166,947,1885,2510\ \ \ \ \ \ \ /*\ 800\ \ PWM*/}}
+\DoxyCodeLine{00064\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ 135,760,1510,2010\ \ \ \ \ \ /*\ 1000\ \ PWM*/}}
+\DoxyCodeLine{00065\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ 72,385,760,1010\ \ \ \ \ \ /*\ 2000\ \ PWM*/}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00068\ \ \ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pwm\_freq\_tbl[16]\ =\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ 6250,6250,\ 6250,\ 6250,\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 400\ */}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ 250,250,250,250,\ \ \ \ \ \ \textcolor{comment}{/*\ 10K*/}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ 83,83,\ 83,\ 83,\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 30K*/}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ 125,125,\ 125,\ 125\ \ \ \ \textcolor{comment}{/*\ 20K*/}}
+\DoxyCodeLine{00075\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ 3125,3125,\ 3125,\ 3125\ \ \ \ \ \ \ \ \ /*\ 800\ */}}
+\DoxyCodeLine{00076\ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ 2500,2500,\ 2500,\ 2500\ \ \ \ \ \ \ \ \ /*\ 1000\ */}}
+\DoxyCodeLine{00077\ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ 1250,1250,\ 1250,\ 1250\ \ \ \ \ \ \ \ \ /*\ 2000\ */}}
+\DoxyCodeLine{00078\ \ \};}
+\DoxyCodeLine{00079\ \ \ }
+\DoxyCodeLine{00080\ \ }
+\DoxyCodeLine{00081\ \ }
+\DoxyCodeLine{00082\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00083\ \textcolor{comment}{/*\ \ \ \ Local\ function\ prototypes\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00084\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00085\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ io\_init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{void}\ data\_init\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00088\ \textcolor{keywordtype}{void}\ set\_PWM\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ new\_pwm);}
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{void}\ set\_PWM\_1\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ rd\_new\_PWM\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00091\ \textcolor{keywordtype}{void}\ set\_PWM\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ new\_pwm);}
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ rd\_new\_softstart\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{inline}\ u08\_t\ INV\_EN(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00095\ \textcolor{keyword}{inline}\ u08\_t\ \ INV\_MAXDUTY(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00096\ \ u08\_t\ INV\_DIP\_SW(\textcolor{keywordtype}{void});\ \ }
+\DoxyCodeLine{00097\ \ u08\_t\ INV\_DIP\_SW\_TON(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00098\ \ u08\_t\ INV\_DIP\_SW\_SOFTATART(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00099\ \textcolor{keyword}{inline}\ u08\_t\ INV\_SHUT\_DOWN(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00100\ \textcolor{comment}{//\ inline\ u08\_t\ SOFT\_START\_EN(void);}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{comment}{/*-\/-\/-\/-\/\ temp\ vars\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00103\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pwm\_ui;}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ local\ temp\ var\ */}}
+\DoxyCodeLine{00105\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ l,m;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ local\ temp\ var\ */}}
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ dip\_sw\_t;}
+\DoxyCodeLine{00107\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00108\ \textcolor{comment}{/*\ \ \ \ External\ function\ prototypes\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00109\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00112\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00113\ \textcolor{comment}{/*\ \ \ \ Data\ available\ to\ other\ functions\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00114\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00115\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pwm\_ton\_tbl[4];}
+\DoxyCodeLine{00116\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pwm\_softstart\_tbl[2][2];}
+\DoxyCodeLine{00117\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pwm\_tbl[16];}
+\DoxyCodeLine{00118\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pwm\_freq\_tbl[16];}
+\DoxyCodeLine{00119\ \ \ }
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00122\ \textcolor{comment}{/*\ \ \ \ External\ Application\ function\ prototypes\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00123\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00124\ \textcolor{keywordtype}{void}\ io\_init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00125\ \textcolor{keywordtype}{void}\ set\_PWM\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ new\_pwm);}
+\DoxyCodeLine{00126\ \textcolor{keywordtype}{void}\ set\_PWM\_1\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00127\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ rd\_new\_PWM\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00128\ \textcolor{keywordtype}{void}\ set\_PWM\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ new\_pwm);}
+\DoxyCodeLine{00129\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ rd\_new\_softstart\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{keyword}{extern}\ \ \ u08\_t\ INV\_EN(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00132\ \textcolor{keyword}{extern}\ \ \ u08\_t\ \ INV\_MAXDUTY(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00133\ \textcolor{keyword}{extern}\ \ \ u08\_t\ INV\_DIP\_SW(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00134\ \textcolor{keyword}{extern}\ \ \ u08\_t\ INV\_DIP\_SW\_TON(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00135\ \textcolor{keyword}{extern}\ \ \ u08\_t\ INV\_DIP\_SW\_SOFTATART(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00136\ \textcolor{keyword}{extern}\ \ \ u08\_t\ INV\_SHUT\_DOWN(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00137\ \textcolor{comment}{//\ extern\ \ \ u08\_t\ SOFT\_START\_EN(void);}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ data\_init\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00140\ \textcolor{keywordtype}{void}\ set\_PWM\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ new\_pwm);}
+\DoxyCodeLine{00141\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ rd\_new\_PWM\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ dip\_sw\_t;}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00145\ \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{00146\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ End\ of\ Header\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00147\ \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{00148\ }
+
+\end{DoxyCode}

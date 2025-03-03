@@ -1,0 +1,302 @@
+\doxysection{MDK\+\_\+types.\+h}
+\hypertarget{_m_d_k__types_8h_source}{}\label{_m_d_k__types_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{00002\ \textcolor{comment}{/*\ \ Module\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ MDK\_types.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00003\ \textcolor{comment}{/*\ \ Language\ used\ \ \ \ \ \ \ :\ MPLAB\ C30\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00004\ \textcolor{comment}{/*\ \ Microprocessor\ \ \ \ \ \ :\ PIC24FJ256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00005\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00006\ \textcolor{comment}{/*\ \ Function\ \ \ \ \ \ \ \ \ \ \ \ :\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00007\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00008\ \textcolor{comment}{/*\ \ Revision\ History\ :\ \ Author\ \ \ \ \ \ \ \ \ \ Date\ \ \ \ \ \ \ \ \ \ \ \ Reason\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00009\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ M.D.Kroon\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Initial\ Design\ \ \ \ */}}
+\DoxyCodeLine{00010\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00011\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00012\ \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00015\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ General\ Typedef\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00016\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ u08\_t;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ u16\_t;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ u32\_t;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ s08\_t;}
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{short}\ s16\_t;}
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{long}\ s32\_t;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\ uchar\_p;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\ u08\_p;}
+\DoxyCodeLine{00028\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ *\ u16\_p;}
+\DoxyCodeLine{00029\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ *\ u32\_p;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ *\ s08\_p;}
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{short}\ *\ s16\_p;}
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{long}\ *\ s32\_p;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//typedef\ unsigned\ short\ uint16\_t;}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ \ }\{\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b7\ \ \ \ :1;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b6\ \ \ \ :1;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b5\ \ \ \ :1;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b4\ \ \ \ :1;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b3\ \ \ \ :1;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b2\ \ \ \ :1;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b1\ \ \ \ :1;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b0\ \ \ \ :1;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \}\ \mbox{\hyperlink{structchar__bit__t}{char\_bit\_t}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ \ }\{\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b15\ \ \ \ :1;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b14\ \ \ \ :1;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b13\ \ \ \ :1;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b12\ \ \ \ :1;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b11\ \ \ \ :1;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b10\ \ \ \ :1;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b9\ \ \ \ \ :1;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b8\ \ \ \ \ :1;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b7\ \ \ \ \ :1;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b6\ \ \ \ \ :1;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b5\ \ \ \ \ :1;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b4\ \ \ \ \ :1;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b3\ \ \ \ \ :1;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b2\ \ \ \ \ :1;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b1\ \ \ \ \ :1;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b0\ \ \ \ \ :1;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \}\ \mbox{\hyperlink{structint__bit__t}{int\_bit\_t}};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{comment}{//typedef\ struct\ \ \ \ \{}}
+\DoxyCodeLine{00068\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b63\ \ :1;}}
+\DoxyCodeLine{00069\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b62\ \ :1;}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b61\ \ :1;}}
+\DoxyCodeLine{00071\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b60\ \ :1;}}
+\DoxyCodeLine{00072\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b59\ \ :1;}}
+\DoxyCodeLine{00073\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b58\ \ :1;}}
+\DoxyCodeLine{00074\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b57\ \ :1;}}
+\DoxyCodeLine{00075\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b56\ \ :1;}}
+\DoxyCodeLine{00076\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b55\ \ :1;}}
+\DoxyCodeLine{00077\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b54\ \ :1;}}
+\DoxyCodeLine{00078\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b53\ \ :1;}}
+\DoxyCodeLine{00079\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b52\ \ :1;}}
+\DoxyCodeLine{00080\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b51\ \ :1;}}
+\DoxyCodeLine{00081\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b50\ \ :1;}}
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b49\ \ :1;}}
+\DoxyCodeLine{00083\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b48\ \ :1;}}
+\DoxyCodeLine{00084\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b47\ \ :1;}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b46\ \ :1;}}
+\DoxyCodeLine{00086\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b45\ \ :1;}}
+\DoxyCodeLine{00087\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b44\ \ :1;}}
+\DoxyCodeLine{00088\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b43\ \ :1;}}
+\DoxyCodeLine{00089\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b42\ \ :1;}}
+\DoxyCodeLine{00090\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b41\ \ :1;}}
+\DoxyCodeLine{00091\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b40\ \ :1;}}
+\DoxyCodeLine{00092\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b39\ \ :1;}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b38\ \ :1;}}
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b37\ \ :1;}}
+\DoxyCodeLine{00095\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b36\ \ :1;}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b35\ \ :1;}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b34\ \ :1;}}
+\DoxyCodeLine{00098\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b33\ \ :1;}}
+\DoxyCodeLine{00099\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b32\ \ :1;\ }}
+\DoxyCodeLine{00100\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b31\ \ :1;}}
+\DoxyCodeLine{00101\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b30\ \ :1;}}
+\DoxyCodeLine{00102\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b29\ \ :1;}}
+\DoxyCodeLine{00103\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b28\ \ :1;}}
+\DoxyCodeLine{00104\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b27\ \ :1;}}
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b26\ \ :1;}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b25\ \ :1;}}
+\DoxyCodeLine{00107\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b24\ \ :1;}}
+\DoxyCodeLine{00108\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b23\ \ :1;}}
+\DoxyCodeLine{00109\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b22\ \ :1;}}
+\DoxyCodeLine{00110\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b21\ \ :1;}}
+\DoxyCodeLine{00111\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b20\ \ :1;}}
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b19\ \ :1;}}
+\DoxyCodeLine{00113\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b18\ \ :1;}}
+\DoxyCodeLine{00114\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b17\ \ :1;}}
+\DoxyCodeLine{00115\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b16\ \ :1;}}
+\DoxyCodeLine{00116\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b15\ \ :1;}}
+\DoxyCodeLine{00117\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b14\ \ :1;}}
+\DoxyCodeLine{00118\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b13\ \ :1;}}
+\DoxyCodeLine{00119\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b12\ \ :1;}}
+\DoxyCodeLine{00120\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b11\ \ :1;}}
+\DoxyCodeLine{00121\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b10\ \ :1;}}
+\DoxyCodeLine{00122\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b9\ \ \ :1;}}
+\DoxyCodeLine{00123\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b8\ \ \ :1;}}
+\DoxyCodeLine{00124\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b7\ \ \ :1;}}
+\DoxyCodeLine{00125\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b6\ \ \ :1;}}
+\DoxyCodeLine{00126\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b5\ \ \ :1;}}
+\DoxyCodeLine{00127\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b4\ \ \ :1;}}
+\DoxyCodeLine{00128\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b3\ \ \ :1;}}
+\DoxyCodeLine{00129\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b2\ \ \ :1;}}
+\DoxyCodeLine{00130\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b1\ \ \ :1;}}
+\DoxyCodeLine{00131\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ long\ long\ b0\ \ \ :1;}}
+\DoxyCodeLine{00132\ \textcolor{comment}{//\ \ \ \ \ \}\ ll\_int\_bit\_t;}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{keyword}{typedef}\ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_1;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_0;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \}\ \mbox{\hyperlink{structint__byte__t}{int\_byte\_t}};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \textcolor{keyword}{typedef}\ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\_1;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\_0;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \}\ \mbox{\hyperlink{structlong__int__t}{long\_int\_t}};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{keyword}{typedef}\ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\_3;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\_2;}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\_1;}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\_0;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \}\ \mbox{\hyperlink{structlong__long__int__t}{long\_long\_int\_t}};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \textcolor{keyword}{typedef}\ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_h3;}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_h2;}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_h1;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_h0;}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \}\ \mbox{\hyperlink{structlong__byte__t}{long\_byte\_t}};}
+\DoxyCodeLine{00161\ \ }
+\DoxyCodeLine{00162\ \textcolor{keyword}{typedef}\ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_h7;}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_h6;}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_h5;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_h4;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_h3;}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_h2;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_h1;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b\_h0;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \}\ \mbox{\hyperlink{structlong__long__byte__t}{long\_long\_byte\_t}};}
+\DoxyCodeLine{00173\ \ }
+\DoxyCodeLine{00174\ \ \textcolor{keyword}{typedef}\ \ \textcolor{keyword}{union}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \mbox{\hyperlink{structint__byte__t}{int\_byte\_t}}\ \ B;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ I;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \}\ \mbox{\hyperlink{unionint__byte__ut}{int\_byte\_ut}};}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ }
+\DoxyCodeLine{00180\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ \ \ }}
+\DoxyCodeLine{00181\ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{structlong__byte__t}{long\_byte\_t}}\ \ \ \ \ B;}
+\DoxyCodeLine{00183\ \ \ \ \ \mbox{\hyperlink{structlong__int__t}{long\_int\_t}}\ \ \ \ \ \ \ \ W;}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \ \ L;\ \ \ \ }
+\DoxyCodeLine{00185\ \ \ \ \ \}\mbox{\hyperlink{unionlong__byte__ut}{long\_byte\_ut}};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ \ \ }}
+\DoxyCodeLine{00188\ \ \ \ \{}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \mbox{\hyperlink{structlong__long__byte__t}{long\_long\_byte\_t}}\ \ \ \ LB;}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ B[8];}
+\DoxyCodeLine{00192\ \ \ \ \ \mbox{\hyperlink{structlong__long__int__t}{long\_long\_int\_t}}\ \ \ \ \ \ W;}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \ LL;\ \ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{comment}{//ll\_int\_bit\_t\ \ \ \ \ \ LLb;\ \ }}
+\DoxyCodeLine{00195\ \ \ \ \ \}\mbox{\hyperlink{unionlong__long__byte__ut}{long\_long\_byte\_ut}};}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \textcolor{keyword}{typedef}\ \ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ c[4];}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i[2];}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ l;}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \}\ \mbox{\hyperlink{unionlong__ut}{long\_ut}};}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ }
+\DoxyCodeLine{00205\ \textcolor{comment}{//typedef\ \ struct}}
+\DoxyCodeLine{00206\ \textcolor{comment}{//\ \ \ \ \ \ \{}}
+\DoxyCodeLine{00207\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ char\ yr;}}
+\DoxyCodeLine{00208\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ char\ mth;}}
+\DoxyCodeLine{00209\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ char\ day;}}
+\DoxyCodeLine{00210\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ char\ day\_ow;}}
+\DoxyCodeLine{00211\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ char\ hr;}}
+\DoxyCodeLine{00212\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ char\ min;}}
+\DoxyCodeLine{00213\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ char\ sec;}}
+\DoxyCodeLine{00214\ \textcolor{comment}{//\ \ \ \ \ \ unsigned\ char\ cs;}}
+\DoxyCodeLine{00215\ \textcolor{comment}{//\ \ \ \ \ \ \}\ SRTC\_t;}}
+\DoxyCodeLine{00216\ \textcolor{comment}{//}}
+\DoxyCodeLine{00217\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00220\ \textcolor{comment}{/*\ \ \ \ Bit\ definitions\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00221\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#define\ \ BIT0\ \ \ \ \ \ \ (1<<0)}}
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#define\ \ BIT1\ \ \ \ \ \ \ (1<<1)}}
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\#define\ \ BIT2\ \ \ \ \ \ \ (1<<2)}}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#define\ \ BIT3\ \ \ \ \ \ \ (1<<3)}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#define\ \ BIT4\ \ \ \ \ \ \ (1<<4)}}
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#define\ \ BIT5\ \ \ \ \ \ \ (1<<5)}}
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\#define\ \ BIT6\ \ \ \ \ \ \ (1<<6)}}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\#define\ \ BIT7\ \ \ \ \ \ \ (1<<7)}}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00234\ \textcolor{comment}{/*\ \ \ \ Application\ IOs\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00235\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#define\ TRUE\ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\#define\ FALSE\ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\#define\ PIN\_INPUT\ \ \ \ \ \ \ TRUE}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#define\ PIN\_OUTPUT\ \ \ \ \ \ FALSE}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\#define\ PIN\_OPENDRAIN\ \ \ TRUE}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\#define\ \ PIN\_PULLUP\ \ \ \ \ TRUE}}
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\#define\ \ PIN\_PULLDOWN\ \ \ TRUE}}
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\#define\ \ PIN\_DISABLED\ \ \ FALSE}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#define\ \ PIN\_ENABLED\ \ \ \ TRUE}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ \ PRESSED\ \ \ \ \ \ \ \ FALSE}}
+\DoxyCodeLine{00247\ \textcolor{preprocessor}{\#define\ \ PIN\_LOW\ \ \ \ \ \ \ \ FALSE\ \ \ }}
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#define\ \ PIN\_HIGH\ \ \ \ \ \ \ TRUE}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#define\ \ LOW\ \ \ \ \ \ \ \ \ \ \ \ FALSE\ \ \ }}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\#define\ \ HIGH\ \ \ \ \ \ \ \ \ \ \ TRUE}}
+\DoxyCodeLine{00251\ \textcolor{preprocessor}{\#define\ \ CS\_ENABLED\ \ \ \ \ FALSE\ \ \ }}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#define\ \ CS\_DISABLED\ \ \ \ TRUE}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#define\ \ ENABLED\ \ \ \ \ \ \ \ FALSE\ \ \ }}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#define\ \ DISABLED\ \ \ \ \ \ \ TRUE}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#define\ \ nENABLED\ \ \ \ \ \ \ FALSE\ \ \ }}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#define\ \ nDISABLED\ \ \ \ \ \ TRUE}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#define\ \ PWR\_OFF\ \ \ \ \ \ \ \ FALSE\ \ \ }}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#define\ \ PWR\_ON\ \ \ \ \ \ \ \ \ TRUE}}
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\#define\ \ INSTALLED\ \ \ \ \ \ TRUE}}
+\DoxyCodeLine{00260\ \textcolor{preprocessor}{\#define\ \ RECEIVE\ \ \ \ \ \ \ \ LOW}}
+\DoxyCodeLine{00261\ \textcolor{preprocessor}{\#define\ \ TRANSMIT\ \ \ \ \ \ \ HIGH}}
+\DoxyCodeLine{00262\ \textcolor{preprocessor}{\#define\ FAN\_ON\ \ \ \ \ \ \ \ \ \ HIGH}}
+\DoxyCodeLine{00263\ \textcolor{preprocessor}{\#define\ FAN\_OFF\ \ \ \ \ \ \ \ \ LOW}}
+\DoxyCodeLine{00264\ \textcolor{preprocessor}{\#define\ BUZZER\_ON\ \ \ \ \ \ \ HIGH}}
+\DoxyCodeLine{00265\ \textcolor{preprocessor}{\#define\ BUZZER\_OFF\ \ \ \ \ \ LOW}}
+\DoxyCodeLine{00266\ \textcolor{preprocessor}{\#define\ X\_BUZZER\_ON\ \ \ \ \ HIGH}}
+\DoxyCodeLine{00267\ \textcolor{preprocessor}{\#define\ X\_BUZZER\_OFF\ \ \ \ LOW}}
+\DoxyCodeLine{00268\ \textcolor{preprocessor}{\#define\ TRUE\_A5\ \ \ \ \ \ \ \ \ 0xA5}}
+\DoxyCodeLine{00269\ \textcolor{preprocessor}{\#define\ FALSE\_A5\ \ \ \ \ \ \ \ 0x5A}}
+\DoxyCodeLine{00270\ \textcolor{preprocessor}{\#define\ TEMP\_ON\ \ \ \ \ \ \ \ \ HIGH}}
+\DoxyCodeLine{00271\ \textcolor{preprocessor}{\#define\ TEMP\_OFF\ \ \ \ \ \ \ \ LOW}}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00275\ \textcolor{comment}{/*\ \ \ \ Application\ data\ types\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00276\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00277\ \textcolor{preprocessor}{\#if\ (\ MDK\_TYPES\_OWNER\ ==\ 1\ )}}
+\DoxyCodeLine{00278\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00279\ \textcolor{comment}{/*\ \ \ \ Local\ function\ prototypes\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00280\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00283\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00284\ \textcolor{comment}{/*\ \ \ \ Data\ avalible\ to\ other\ functions\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00285\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00290\ \textcolor{comment}{/*\ \ \ \ External\ Application\ function\ prototypes\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00291\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00294\ \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{00295\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ End\ of\ Header\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00296\ \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{00297\ }
+
+\end{DoxyCode}

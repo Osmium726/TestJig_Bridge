@@ -1,0 +1,48 @@
+\doxysection{driver\+\_\+isr.\+c File Reference}
+\hypertarget{driver__isr_8c}{}\label{driver__isr_8c}\index{driver\_isr.c@{driver\_isr.c}}
+
+
+Driver ISR.  
+
+
+{\ttfamily \#include $<$driver\+\_\+init.\+h$>$}\newline
+{\ttfamily \#include $<$compiler.\+h$>$}\newline
+{\ttfamily \#include $<$includes.\+h$>$}\newline
+Include dependency graph for driver\+\_\+isr.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{driver__isr_8c_a9c263623c85a6f82cee2e0ed5610625e}\label{driver__isr_8c_a9c263623c85a6f82cee2e0ed5610625e} 
+{\bfseries ISR} (TCA0\+\_\+\+OVF\+\_\+vect)
+\item 
+\Hypertarget{driver__isr_8c_ad212a8823a6f26af829430cc424d8ca0}\label{driver__isr_8c_ad212a8823a6f26af829430cc424d8ca0} 
+{\bfseries ISR} (TCA0\+\_\+\+CMP0\+\_\+vect)
+\item 
+\Hypertarget{driver__isr_8c_ac24dd487b84e8a5c9163fc8f4d475396}\label{driver__isr_8c_ac24dd487b84e8a5c9163fc8f4d475396} 
+{\bfseries ISR} (TCA0\+\_\+\+CMP1\+\_\+vect)
+\item 
+\Hypertarget{driver__isr_8c_afb801c9723c0b4e6f70b15230518e17e}\label{driver__isr_8c_afb801c9723c0b4e6f70b15230518e17e} 
+{\bfseries ISR} (TCA0\+\_\+\+CMP2\+\_\+vect)
+\item 
+\Hypertarget{driver__isr_8c_a26e82ef2970ad367c7f474238ff15c75}\label{driver__isr_8c_a26e82ef2970ad367c7f474238ff15c75} 
+{\bfseries ISR} (PORTB\+\_\+\+PORT\+\_\+vect)
+\item 
+\Hypertarget{driver__isr_8c_a498aa6d3c05eb0c93268cd2516dc55ca}\label{driver__isr_8c_a498aa6d3c05eb0c93268cd2516dc55ca} 
+{\bfseries ISR} (PORTC\+\_\+\+PORT\+\_\+vect)
+\item 
+\Hypertarget{driver__isr_8c_a050ef16c421b9a04138f1355a8d6540b}\label{driver__isr_8c_a050ef16c421b9a04138f1355a8d6540b} 
+{\bfseries ISR} (AC0\+\_\+\+AC\+\_\+vect)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Driver ISR. 
+
+(c) 2020 Microchip Technology Inc. and its subsidiaries.
+
+Subject to your compliance with these terms,you may use this software and any derivatives exclusively with Microchip products.\+It is your responsibility to comply with third party license terms applicable to your use of third party software (including open source software) that may accompany Microchip software.
+
+THIS SOFTWARE IS SUPPLIED BY MICROCHIP "{}\+AS IS"{}. NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-\/\+INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.
+
+IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP\textquotesingle{}S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE. 
