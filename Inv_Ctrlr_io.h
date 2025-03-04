@@ -149,11 +149,11 @@ enum {
 #define PWM_TOP_MAX_40K         (125 )    /* freq = 5Mhz timer TOP   40KHz */
 #define PWM_TOP_MAX_50K         (100 )    /* freq = 5Mhz timer TOP   50KHz */
 
-#define BRIDGE_FREQUENCY  500
-#define BRIDGE_ON_TIME  450
+#define BRIDGE_FREQUENCY_LOW  500         /* freq = 5Khz */
+#define BRIDGE_ON_TIME_LOW_FREQ  450      /* duty cycle for 5Khz wave */
     
-#define BRIDGE_FREQUENCY_1 100
-#define BRIDGE_ON_TIME_1 80
+#define BRIDGE_FREQUENCY_HIGH 80          /* freq = 31Khz */
+#define BRIDGE_ON_TIME_HIGH_FREQ 60       /* duty cycle for 31 Khz wave */
 
  #define PWM_TOP_MAX         PWM_TOP_MAX_800
    
@@ -171,8 +171,8 @@ enum {
 #define PSU_ON                  false        /* swap polarity */
 #define PSU_OFF                 true
 #define SHUTDOWN_ACTIVE         false       
-#define HIGH_FREQUENCY_MARK     false
-
+#define HIGH_FREQUENCY_MARK     false           /* switch setting */
+#define LOW_FREQUENCY_MARK      true            /*    "  "        */
 /*------------------------------------------------------------------------*/
 /*    Bit definitions                                                     */
 /*------------------------------------------------------------------------*/
@@ -201,6 +201,7 @@ unsigned int Pwm_B_u16;
 unsigned int Pwm_old_u16;
 unsigned int Pwm_max_u16;
 unsigned char Pwm_Drv_Channel;
+bool old_freq_switch;
 
 unsigned int Dead_time_u8;
 unsigned int softstart;

@@ -312,18 +312,18 @@ ISR(PORTC_PORT_vect)
 //    nEN_CLEAR_INTERRUPT_FLAG;
 //    }
     
-    if(Freq_INTERRUPT) {
-        if (freq_get_level == HIGH_FREQUENCY_MARK)
-        {
-            set_PWM_2();
-        }
-        else
-        {
-            set_PWM_1();
-        }
-    }
-    Freq_CLEAR_INTERRUPT_FLAG;
-}
+//    if(Freq_INTERRUPT) {
+//        if (freq_select_sw_example() == HIGH_FREQUENCY_MARK)
+//        {
+//            set_PWM_2();
+//        }
+//        else
+//        {
+//            set_PWM_1();
+//        }
+//    }
+//    Freq_CLEAR_INTERRUPT_FLAG;
+ }
 
 /**********************************************************/
 /*  Name        : ISR(AC0_AC_vect)            		    */

@@ -2,6 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Data/Bridge_Test_Jig/Invertor_Controller.X/src/driver_init.c</file>
+            <file>file:/C:/Data/Bridge_Test_Jig/Invertor_Controller.X/utils/atomic.h</file>
+            <file>file:/C:/Data/Bridge_Test_Jig/Invertor_Controller.X/include/atmel_start_pins.h</file>
+            <file>file:/C:/Data/Bridge_Test_Jig/Invertor_Controller.X/Inv_Ctrlr_io.h</file>
+            <file>file:/C:/Data/Bridge_Test_Jig/Invertor_Controller.X/Inv_Ctrlr.c</file>
+            <file>file:/C:/Data/Bridge_Test_Jig/Invertor_Controller.X/include/avr/iotn417.h</file>
+            <file>file:/C:/Data/Bridge_Test_Jig/Invertor_Controller.X/Main.c</file>
+            <file>file:/C:/Data/Bridge_Test_Jig/Invertor_Controller.X/include/port.h</file>
+            <file>file:/C:/Data/Bridge_Test_Jig/Invertor_Controller.X/driver_isr.c</file>
+            <file>file:/C:/Data/Bridge_Test_Jig/Invertor_Controller.X/Inv_Ctrlr.h</file>
+        </group>
     </open-files>
 </project-private>

@@ -208,36 +208,39 @@ void set_PWM (unsigned int new_pwm)
 /*--------------------------------------------------------*/
 
 /**********************************************************/
-/*  Name        : set_PWM           		                */
-/*  Parameters  : unsigned int new_pwm                      */
+/*  Name        : set_output_5Khz           		                */
+/*  Parameters  : void                                            */
 /*  Returns     : none                                       */
-/*  Function    : to set the PWM Values                       */
-/*                  only update if different from previous setting*/
-/*                  Only called once at start                */
+/*  Function    : to set the output wave of 5KHz using interrupts          */
+/*                this is default wave output                             */
+/*                                                         */
 /*--------------------------------------------------------*/
-void set_PWM_1 (void)
+
+void set_output_5Khz (void)
 {
  //unsigned int new_pwm_t;
- dip_sw_t = INV_DIP_SW();
-    if ( Pwm_old_u16 != dip_sw_t )
-        {
-//        new_pwm_t = pwm_freq_tbl[ dip_sw_t];
-          TCA0.SINGLE.PER = BRIDGE_FREQUENCY;                      /* Set the TOP value for the timer ro roll over back to 0 */
- //       TCA0.SINGLE.CMP0 = PWM_DEAD_TIME;           /* Dead Time at start of cycle allow previous to turn OFF*/
-        
- //       new_pwm_t = pwm_tbl[ dip_sw_t];
-        TCA0.SINGLE.CMP1 = BRIDGE_ON_TIME;            /* get the max on time  the dip sw */
-        Pwm_old_u16 = dip_sw_t;
-        }
+        TCA0.SINGLE.PER =  BRIDGE_FREQUENCY_LOW;        /* setting interrupt vector for 5 kHz */
+        TCA0.SINGLE.CMP1 = BRIDGE_ON_TIME_LOW_FREQ;     /* setting duty cycle for output */
 }
 
-void set_PWM_2 (void)
+/*--------------------------------------------------------*/
+/*  End set_output_5Khz                                 */
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*  Name        : set_output_31Khz                  */
+/*  Parameters  : void                      */
+/*  Returns     : none                                  */
+/*  Function    : to set the output wave to 31KHz by  */
+/*                changing the TCA0 settings     */
+
+void set_output_31Khz (void)
 {
-        TCA0.SINGLE.PER =  BRIDGE_FREQUENCY_1;
-        TCA0.SINGLE.CMP1 = BRIDGE_ON_TIME_1;
+        TCA0.SINGLE.PER =  BRIDGE_FREQUENCY_HIGH;       /* setting interrupt vector for 31 KHz */
+        TCA0.SINGLE.CMP1 = BRIDGE_ON_TIME_HIGH_FREQ;    /* setting duty cycle for output */
 }
  /*--------------------------------------------------------*/
-/*  End  set_PWM                                        */
+/*  End  set_output_31Khz                                        */
 /*--------------------------------------------------------*/
 
 

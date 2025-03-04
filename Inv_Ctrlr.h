@@ -86,7 +86,7 @@ extern void io_init(void);
 
 void data_init (void);
 void set_PWM (unsigned int new_pwm);
-void set_PWM_1 (void);
+void set_output_5Khz (void);
 unsigned int rd_new_PWM (void);
 void set_PWM (unsigned int new_pwm);
 unsigned int rd_new_softstart (void);
@@ -123,8 +123,8 @@ extern const unsigned int pwm_freq_tbl[16];
 /*----------------------------------------------------------------------*/
 void io_init(void);
 void set_PWM (unsigned int new_pwm);
-void set_PWM_1 (void);
-void set_PWM_2 (void);
+void set_output_5Khz (void);
+void set_output_31Khz (void);
 unsigned int rd_new_PWM (void);
 void set_PWM (unsigned int new_pwm);
 unsigned int rd_new_softstart (void);

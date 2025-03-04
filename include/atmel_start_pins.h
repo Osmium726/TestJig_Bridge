@@ -522,6 +522,11 @@ static inline void nSD_set_isc(const PORT_ISC_t isc)
 	PORTB_pin_set_isc(7, isc);
 }
 
+static inline void freq_set_isc(const PORT_ISC_t isc) {
+    
+    PORTC_pin_set_isc(0, isc);
+}
+
 /**
  * \brief Set nSD inverted mode
  *
@@ -1033,9 +1038,9 @@ static inline bool nEN_get_level()
 	return PORTC_get_pin_level(4);
 }
 
-static inline bool freq_get_level()
+static inline bool freq_select_sw()
 {
-    return PORTC_get_pin_level(3);
+    return PORTC_get_pin_level(2);
 }
 
 /**

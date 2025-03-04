@@ -73,10 +73,50 @@ int main(void)
  //   timer_init();
         
 //set_PWM(Pwm_A_u16);
- set_PWM_1();  /* Read at start to set frequency and duty cycle  default */
-  
-MAIN_LOOP:  
-  	while ((nEN_get_level()== PSU_ON) && ( nMAXDTY_get_level() == PSU_ON))        /* enable high run Max duty to control PSU on/off */
+    
+    
+ set_output_5Khz();  /* Read at start to set frequency and duty cycle  default */
+ 
+ old_freq_switch = LOW_FREQUENCY_MARK;  /* set switch assumed start at 5KHz */
+ 
+ MAIN_LOOP:
+ 
+ while ((nEN_get_level()== PSU_ON) && ( nMAXDTY_get_level() == PSU_ON))        /* enable high run Max duty to control PSU on/off */
+//        while (nEN_get_level()== PSU_ON)        /* enable high run Max duty to control PSU on/off */
+        /* Use a while loop to ensure NO jitter in the run mode */
+            {
+     
+     if(freq_select_sw() != old_freq_switch)        /* checks if switch has changed*/
+     {
+         if(freq_select_sw() == LOW_FREQUENCY_MARK) {  
+             
+             set_output_5Khz();                         /* sets low freq output */
+             old_freq_switch = LOW_FREQUENCY_MARK;      /* remembers current setting */
+         }
+         else 
+         {
+             set_output_31Khz();                        /* sets high freq output */
+             old_freq_switch = HIGH_FREQUENCY_MARK;     /* remembers current setting */
+         }
+            
+     } 
+ }
+             
+        WO0_set_level(false);           /* turns output channels off */
+        WO1_set_level(false);
+        
+        /* stop timer */
+        /* set timer to 0 */
+    	TCA0.SINGLE.CNT = 0x0;     /* Count: 0x0 */
+        Pwm_Drv_Channel = 0;
+//        Run_set_level(true);(1) {
+     
+    goto MAIN_LOOP;
+     
+     
+ 
+//MAIN_LOOP:  
+//  	while ((nEN_get_level()== PSU_ON) && ( nMAXDTY_get_level() == PSU_ON))        /* enable high run Max duty to control PSU on/off */
 //        while (nEN_get_level()== PSU_ON)        /* enable high run Max duty to control PSU on/off */
         /* Use a while loop to ensure NO jitter in the run mode */
             {
@@ -87,17 +127,17 @@ MAIN_LOOP:
     /* stop timer */
     /* set timer to 0 */
 
-        WO0_set_level(false);
-        WO1_set_level(false);
+//        WO0_set_level(false);
+//        WO1_set_level(false);
         
         
 
-    	 TCA0.SINGLE.CNT = 0x0;     /* Count: 0x0 */
-        Pwm_Drv_Channel = 0;
-        Run_set_level(true);
+//    	 TCA0.SINGLE.CNT = 0x0;     /* Count: 0x0 */
+//        Pwm_Drv_Channel = 0;
+//        Run_set_level(true);
         
         
-goto MAIN_LOOP;
+//goto MAIN_LOOP;
 
 //    else     /* enable edge detected reset softstart*/
 //        {
@@ -126,7 +166,7 @@ goto MAIN_LOOP;
  /*------- turn on / run ----------------------------------------------------*/
            if (nEN_get_level() == PSU_ON )    /* if PSU on then softatart or run */
                 {
-                set_PWM_1();
+                set_output_5Khz();
  
 //                if(softstart < softstart_max )
 //                    {
