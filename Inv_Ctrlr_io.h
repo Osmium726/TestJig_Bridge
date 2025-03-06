@@ -171,8 +171,8 @@ enum {
 #define PSU_ON                  false        /* swap polarity */
 #define PSU_OFF                 true
 #define SHUTDOWN_ACTIVE         false       
-#define HIGH_FREQUENCY_MARK     false           /* switch setting */
-#define LOW_FREQUENCY_MARK      true            /*    "  "        */
+#define HIGH_FREQUENCY_MARK     false           /* high switch setting */
+#define LOW_FREQUENCY_MARK      true            /* low      "  "        */
 /*------------------------------------------------------------------------*/
 /*    Bit definitions                                                     */
 /*------------------------------------------------------------------------*/
