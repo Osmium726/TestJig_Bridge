@@ -132,7 +132,7 @@ void data_init (void)
     TCA0.SINGLE.CMP2 = PWM_MAX_LEVEL; /* Compare Register 2: 0x400 */
 	TCA0.SINGLE.CNT  = PWM_MIN_LEVEL;     /* Count: 0x0 */
 
-     
+    
     SD_wait_cntr = 0;
 //    if( softstart < Pwm_A_u16 )   /* soft start stepping up to desired level.*/
 //        {
@@ -218,7 +218,7 @@ void set_PWM (unsigned int new_pwm)
 
 void set_output_5Khz (void)
 {
- //unsigned int new_pwm_t;
+    
         TCA0.SINGLE.PER =  BRIDGE_FREQUENCY_LOW;        /* setting interrupt vector for 5 kHz */
         TCA0.SINGLE.CMP1 = BRIDGE_ON_TIME_LOW_FREQ;     /* setting duty cycle for output */
 }
